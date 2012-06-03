@@ -1,0 +1,2 @@
+avr-gcc -g -Os -mmcu=atmega16 -c main.c && avr-gcc -g -mmcu=atmega16 -o main.elf main.o && avr-objcopy -j .text -j .data -O ihex main.elf main.hex && sudo avrdude -P/dev/serial/by-id/usb-PROTTOSS_AVR910_USB_Programmer-if00  -p m16 -c avr910  -U flash:w:main.hex
+
